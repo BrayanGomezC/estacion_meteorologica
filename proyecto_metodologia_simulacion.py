@@ -23,6 +23,7 @@ def simular_datos(): #Decidimos hacerlos int ya que permitia visualizar mejor la
 
 def mostrar(humedad,temperatura,intensidad,tiempo_muestreo): #Se modifica la función de mostrar en lcd para que sea visualizable en la consola.
     print("H:{}% T:{}C I:{}Lx Tpo:{}s".format(humedad,temperatura,intensidad,tiempo_muestreo))
+    
 
 def almacenar_en_tabla(tabla, datos):
     tabla.append(datos)
@@ -52,3 +53,6 @@ while True:
     # Cada cierto tiempo, convertir la tabla en un archivo CSV
     if len(tabla_datos) % 10 == 0:  # En este caso, cada 10 muestras, pero puedes ser modificado.
         convertir_a_csv(tabla_datos)
+        break
+        
+        
